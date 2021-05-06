@@ -1,0 +1,192 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#C5DBCC;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "cabecalho "
+        "conteudo "
+        "rodape";
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto 30px;;
+    font-family: 'Playfair Display', serif;
+    height: 100vh;
+    margin: 0;
+}
+
+header{
+    color: #4B734B;
+    font-size: 2em;
+    grid-area: cabecalho;
+    height: 100px;
+    text-align: center;
+}
+
+main{
+    display: grid;
+    row-gap: 20px;
+    grid-area: conteudo;
+    grid-template-areas:
+             "ansioliticas"
+             "digestivas"
+             "anti-histaminicas";
+    grid-template-columns: auto;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    height: calc(100vh - 200);
+    justify-self: center;
+    padding: 20px;
+    width: 80%;
+}
+
+.plantas-ansioliticas {
+    background-color: #E4F1E4;
+    border-radius: 7.5px;
+    grid-area: ansioliticas;
+    display: grid;
+    gap: 15px;
+    grid-template-areas:
+        "titulo titulo titulo titulo"
+        "imagem imagem imagem imagem";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 20px auto;
+    padding: 8px;
+    width: 100%;
+}
+
+h2{
+    align-items: center;
+    background-color: #c5dbccc4;
+    color: #213a21;
+    display: flex;
+    font-size: 1.4em;
+    grid-area: titulo;
+    margin:0;
+    padding:15px 6px;
+}
+
+.plantas-ansioliticas :nth-child(2){
+    align-items: flex-end;
+    background: url("https://images.pexels.com/photos/1775006/pexels-photo-1775006.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260") center / cover no-repeat;
+    display: flex;
+    grid-column: 1/2;
+}
+
+.plantas-ansioliticas :nth-child(3){
+    align-items: flex-end;
+    background: url("https://maestrovirtuale.com/wp-content/uploads/2019/10/toronjil-small-16_9.jpg") center / cover no-repeat;
+    display: flex;
+    grid-column: 2/3;
+}
+
+.plantas-ansioliticas :nth-child(4){
+    align-items: flex-end;
+    background: url("https://cdn.pixabay.com/photo/2015/07/17/08/45/valeriana-officinalis-848672_1280.jpg") center / cover no-repeat;
+    display: flex;
+    grid-column: 3/4;
+}
+
+.plantas-ansioliticas :nth-child(5){
+    align-items: flex-end;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaVBW2rgwh6QLxAlMU62EsAo_DzzWRxnRVvJaZnx6Aa57f0sVxYZLUddTi0T-XtfQqvFk&usqp=CAU") center / cover no-repeat;
+    display: flex;
+    grid-column: 4/4;
+}
+
+.titulo-ansioliticas, .titulo-digestivas, .titulo-anti-histaminicas {
+    background-color: #c5dbccc4;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.plantas-digestivas {
+    background-color: #E4F1E4;
+    border-radius: 7.5px;
+    grid-area: digestivas;
+    display: grid;
+    gap: 15px;
+    grid-template-areas:
+        "titulo titulo titulo titulo"
+        "imagem imagem imagem imagem";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 20px auto;
+    padding: 8px;
+    width: 100%;
+}
+
+.plantas-digestivas :nth-child(2){
+    align-items: flex-end;
+    background: url("https://cdn.pixabay.com/photo/2017/07/26/05/43/herb-2540565_1280.jpg") center / cover no-repeat;
+    display: flex;
+    grid-column: 1/2;
+}
+
+.plantas-digestivas :nth-child(3){
+    align-items: flex-end;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLuXopBsHEq47BHCrNUEXIYCyffvQOcCQc6tOEbTy7RS_RI6lNPslco1S5ankYs586Hbw&usqp=CAU") center / cover no-repeat;
+    display: flex;
+    grid-column: 2/3;
+}
+
+.plantas-digestivas :nth-child(4){
+    align-items: flex-end;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJVG98_lugA1vvDkCotO398cH9pKvbEspw5A&usqp=CAU") center / cover no-repeat;
+    display: flex;
+    grid-column: 3/4;
+}
+
+.plantas-digestivas :nth-child(5){
+    align-items: flex-end;
+    background: url("https://cdn.pixabay.com/photo/2020/05/16/19/47/plant-5178960_1280.jpg") center / cover no-repeat;
+    display: flex;
+    grid-column: 4/4;
+}
+
+.plantas-anti-histaminicas {
+    background-color: #E4F1E4;
+    border-radius: 7.5px;
+    grid-area: anti-histaminicas;
+    display: grid;
+    gap: 15px;
+    grid-template-areas:
+        "titulo titulo titulo titulo"
+        "imagem imagem imagem imagem";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 20px auto;
+    padding: 8px;
+    width: 100%;
+}
+
+.plantas-anti-histaminicas :nth-child(2){
+    align-items: flex-end;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYq13JatyYN_I1rhCC-GUsdpvhY6Zvf2zlgA&usqp=CAU") center / cover no-repeat;
+    display: flex;
+    grid-column: 1/3;
+}
+
+.plantas-anti-histaminicas :nth-child(3){
+    align-items: flex-end;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9e2kvqfeqaa8yndNvDcsOm9bKzSP4obGfvw_e1ZzGE82ApzREzdbYfOXwxKOhN_ERMoM&usqp=CAU") center / cover no-repeat;
+    display: flex;
+    grid-column: 3/4;
+}
+
+.plantas-anti-histaminicas :nth-child(4){
+    align-items: flex-end;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXa2DucboFY_D0nrToYhqmO0Yw0yPdhvkLdA&usqp=CAU") center / cover no-repeat;
+    display: flex;
+    grid-column: 4/4;
+}
+
+footer{
+    align-self: flex-end;
+    background-color:#E4F1E4;
+    font-size: 10px;
+    grid-area: rodape;
+    height: 20px;
+    padding: 2px;
+    text-align: center;
+}
